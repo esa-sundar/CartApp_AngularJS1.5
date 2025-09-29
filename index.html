@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="iceCreamApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Ice Cream Shop</title>
+
+  <!-- AngularJS & UI-Router -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+
+  <!-- Main app module -->
+  <script src="app.js"></script>
+
+  <!-- Services -->
+  <script src="services/cart.service.js"></script>
+  <script src="services/product.service.js"></script>
+
+  <!-- Components -->
+  <script src="components/home/home.component.js"></script>
+  <script src="components/product/product.component.js"></script>
+  <script src="components/cart/cart.component.js"></script>
+  <script src="components/checkout/checkout.component.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <button ui-sref="home">Products</button>
+    <button ui-sref="cart">Cart</button>
+    <button ui-sref="checkout">Checkout</button>
+  </div>
+
+  <div ui-view></div>
+</body>
+</html>
